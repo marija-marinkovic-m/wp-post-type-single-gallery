@@ -1,0 +1,88 @@
+#feat_media_button, #remove_all{padding: 10px; height:auto;margin-right:10px;}
+#feat_media_button span, #remove_all span{position:relative; top:3px; margin-right:6px;}
+#etl_gallery_ui {background: #F1F1F1;}
+#image-list {
+
+    }
+    #image-list li {
+        position: relative;
+        display: inline-block;
+        margin: 10px 10px 10px 0; padding: 8px;
+        color: #bebebe; font-family: monospace;
+        background: #fff;
+        border: 1px solid #e5e5e5; border-radius: 3px;
+        cursor: move;
+        }
+        #image-list li span.dashicons {
+            position: absolute; z-index: 20;
+            left: 10px;
+            cursor: pointer;
+            background: #fff;
+            border-radius: 50%;
+        }
+        #image-list li span.dashicons-dismiss {
+            top: 10px; color: #D20404;
+        }
+        #image-list li span.dashicons-edit {
+            top: 35px; color: #fff;
+            font-size: 16px;
+            border: 2px solid #fff;
+            background: #0073aa;
+            -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing: border-box;
+        }
+        #image-list li img {display: block; width: 150px; height: 150px;}
+
+
+/**
+* Editor
+*/
+#edit-frame-id {}
+    #edit-frame-id .media-frame-router {display: none !important}
+    #edit-frame-id .attachments-browser .media-sidebar {
+        position: absolute; z-index: 9999;
+        width: 100%;
+        left: 0; right: 0;
+        -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    }
+
+/*
+ul#image-list{
+overflow:hidden;
+padding: 1px;
+-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;
+}
+ul#image-list li{
+    position:relative;
+    height:200px;
+    float:left;width: 31%;
+    margin: 0 0 20px; padding: 0;
+    border: 5px solid #ffffff;
+    outline:1px solid #cdcdcd;
+    overflow:hidden;
+    cursor: move;
+    }
+    ul#image-list li:nth-child(3n+2){margin-left: 1%; margin-right: 1%;}
+    ul#image-list li img{display:block;width:100%; height: auto;}
+    ul#image-list li span.dashicons-dismiss{
+        position:absolute; top:-4px; left: -4px; z-index: 999;
+        width:30px; height:30px;
+        text-align:center; line-height:30px;
+        background: #ffffff;
+        border-radius:50%;
+        cursor:pointer;
+        -moz-transition: all 300ms ease-in;
+        -wekit-transition: all 300ms ease-in;
+        transition: all 300ms ease-in;
+        }
+        ul#image-list li span.dashicons-dismiss:hover{
+            color: #be0000;
+        }
+        ul#image-list li:hover span.dashicons-dismiss{
+            -moz-transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+@media screen and (max-width: 1400px) {
+ul#image-list li{width:46%;margin-left: 0 !important; margin-right: 0 !important;}
+    ul#image-list li:nth-child(2n){float:right;}
+}*/

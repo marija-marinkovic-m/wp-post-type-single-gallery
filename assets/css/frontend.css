@@ -1,0 +1,122 @@
+.main-holder > div, .main-holder > .panel { width:100%; }
+.caro-pager { position: relative; margin-top:10px; margin-bottom: 50px; }
+    .cycle-slideshow.main-holder img { width: 100%; height: auto; display: block; }
+
+.slides .cycle-slideshow > div:not(.cycle-overlay),
+.slides .cycle-slideshow a.panel{
+    bottom : 0;
+    display: none;
+    background-repeat: no-repeat; background-size: contain; background-position: 50% 50%; background-color: black;
+    }
+    .slides .cycle-slideshow > div:first-child,
+    .slides .cycle-slideshow > .panel:first-child {display: block;}
+    .slides .cycle-slideshow > div img,
+    .slides .cycle-slideshow > .panel img {opacity:0; z-index: -1;}
+        .slides .cycle-slideshow > a.panel img {opacity: 0 !important; }
+
+.caro-pager.external {
+    display: block;
+    width: 100%;
+    overflow:hidden; clear: both;
+    }
+    .caro-pager.external .panel {
+        display:block; width: 20%;
+        float: left;
+        padding: 0; margin: 0;
+        -moz-box-sizing:border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing:border-box;
+    }
+.caro-pager .cycle-slide,
+.caro-pager .panel {
+    border: 3px solid transparent;
+    }
+.caro-pager .cycle-slide-active,
+.caro-pager .cycle-pager-active { border:3px solid #004; }
+    .caro-pager .cycle-slide img,
+    .caro-pager .panel img {display: block; width: 100%; height: inherit;}
+
+
+.etl-slider * {
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing: border-box;
+}
+
+.cycle-overlay {
+    font-family: tahoma, arial;
+    position: absolute; bottom: 0; width: 100%; z-index: 600;
+    background: black; color: white; padding: 15px; opacity: .5;
+}
+.cycle-caption { top: 10px }
+.cycle-caption { bottom: 10px; top: auto; font-size: 20px; font-weight: bold }
+
+/*** prev next */
+.cmd .prev-next {
+    position: absolute; z-index: -1; top: 0; left: 0; right: 0; bottom:0;
+    margin: 0 !important;
+    }
+.cmd .icon {
+    position:absolute; left:-60px; top:50%; display:block;
+    width:100px; height:60px;
+    margin-top:-30px;
+    }
+    .cmd .cycle-next .icon {
+        left:auto; right:-60px;
+        -webkit-transform:rotate(180deg); transform:rotate(180deg);
+        }
+    .cmd .icon:before,
+    .cmd .icon:after {
+        content:'';
+        position:absolute; left:25%;
+        width:3px; height:50%;
+        background:#dc404a;
+        -webkit-transition:-webkit-transform 0.3s, background-color 0.3s;
+        -moz-transition:-moz-transform 0.3s, background-color 0.3s;
+        -ms-transition:-ms-transform 0.3s, background-color 0.3s;
+        -o-transition:-o-transform 0.3s, background-color 0.3s;
+        transition:transform 0.3s, background-color 0.3s;
+        -webkit-backface-visibility:hidden;
+        backface-visibility:hidden;
+        }
+    .cmd .icon:before {
+        -webkit-transform:translateX(-50%) rotate(30deg);
+        -moz-transform:translateX(-50%) rotate(30deg);
+        -ms-transform:translate(-50%, 0) rotate(30deg);
+        -o-transform:translateX(-50%) rotate(30deg);
+        transform:translateX(-50%) rotate(30deg);
+        -webkit-transform-origin:0 100%;
+        transform-origin:0 100%;
+        }
+    .cmd .icon:after {
+        top:50%;
+        -webkit-transform:translateX(-50%) rotate(-30deg);
+        -moz-transform:translateX(-50%) rotate(-30deg);
+        -ms-transform:translate(-50%, 0) rotate(-30deg);
+        -o-transform:translateX(-50%) rotate(-30deg);
+        transform:translateX(-50%) rotate(-30deg);
+        -webkit-transform-origin:0 0;
+        transform-origin:0 0;
+        }
+        .cmd a:hover .icon:before,
+        .cmd a:hover .icon:after { background:#ff0000;}
+        .cmd a:hover .icon:before {
+            -webkit-transform:translateX(-50%) rotate(45deg);
+            -moz-transform:translateX(-50%) rotate(45deg);
+            -ms-transform:translate(-50%, 0) rotate(45deg);
+            -o-transform:translateX(-50%) rotate(45deg);
+            transform:translateX(-50%) rotate(45deg);
+            }
+        .cmd a:hover .icon:after {
+            -webkit-transform:translateX(-50%) rotate(-45deg);
+            -moz-transform:translateX(-50%) rotate(-45deg);
+            -ms-transform:translate(-50%, 0) rotate(-45deg);
+            -o-transform:translateX(-50%) rotate(-45deg);
+            transform:translateX(-50%) rotate(-45deg);
+            }
+
+
+/** media queries */
+@media screen and (max-width: 1024px) {
+    .cmd .prev-next {display: none;}
+}
